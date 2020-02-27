@@ -1,25 +1,25 @@
 - name: added-feature
-  description: for new features.
+  description: for new features in change log.
   color: a2eeef
 - name: changed
-  description: for changes in existing functionality.
+  description: for changes in existing functionality in change log.
   color: a2eeef
 - name: deprecated
-  description: for soon-to-be removed features.
+  description: for soon-to-be removed features in change log.
   color: e4e669
 - name: removed
-  description: for now removed features.
+  description: for now removed features in change log.
   color: e4e669
 - name: bugfix
-  description: for any bug fixes.
+  description: for any bug fixes in change log.
   color: d73a4a
 - name: security
-  description: in case of vulnerabilities.
+  description: for vulnerabilities in change log.
   color: dd4739
 - name: bug
-  description: Something isn't working
+  description: Something isn't working in issue.
   color: d73a4a
 - name: enhancement
-  description: New feature request
+  description: New feature request in issue.
   color: d73a4a
 
