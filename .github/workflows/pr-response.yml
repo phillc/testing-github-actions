@@ -4,19 +4,6 @@ on:
     types: [opened]
 
 jobs:
-  auto-labeling:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Naturalclar/issue-action@v1.0.0
-        with:
-          keywords: '["bug", "fix"]'
-          labels: '["bugfix"]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - uses: Naturalclar/issue-action@v1.0.0
-        with:
-          keywords: '["added", "feature"]'
-          labels: '["added-feature"]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
   please-label:
     runs-on: ubuntu-latest
     steps:
