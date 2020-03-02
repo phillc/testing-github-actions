@@ -1,10 +1,10 @@
 name: "Set Issue Label"
 on:
-  issues:
+  pull_request:
     types: [opened]
 
 jobs:
-  test:
+  auto-labeling:
     runs-on: ubuntu-latest
     steps:
       - uses: Naturalclar/issue-action@v1.0.0
@@ -17,3 +17,15 @@ jobs:
           keywords: '["added", "feature"]'
           labels: '["added-feature"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+  please-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@0.8.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+            await github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Thank you for your pull request! Please add a label to your PR to help categorize the changelog, and adjust the title of your PR for consumption in release notes.'
+            })
