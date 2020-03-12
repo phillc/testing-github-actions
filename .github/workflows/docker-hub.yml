@@ -8,7 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Test
-      run: echo $GITHUB_REF
-    - name: Test
-      run: echo ${{ GITHUB_REF }}
+      run: echo "asdf,$GITHUB_REF"
 
